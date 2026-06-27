@@ -162,15 +162,10 @@ const sendAudioToBackend = useCallback(async (audioBlob) => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-slate-900 flex items-center justify-center p-4 sm:p-6 relative overflow-hidden">
-      {/* Ambient background glows */}
-      <div className="absolute top-1/4 -left-20 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-1/4 -right-20 w-72 h-72 bg-pink-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
-
-      <div className="relative w-full max-w-md bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl shadow-2xl shadow-purple-900/20 p-6 sm:p-10 flex flex-col items-center text-center transition-all duration-500">
+    <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 sm:p-6 relative overflow-hidden">
+      <div className="relative w-full max-w-md bg-zinc-950 border border-zinc-800 rounded-3xl shadow-2xl shadow-red-900/20 p-6 sm:p-10 flex flex-col items-center text-center transition-all duration-500">
         <div className="mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-bold text-red-500 tracking-tight">
             Sonic Echo
           </h1>
           <p className="text-slate-400 text-sm mt-1">Discover what's playing around you</p>
@@ -182,8 +177,8 @@ const sendAudioToBackend = useCallback(async (audioBlob) => {
             onClick={handleButtonClick}
             className="group relative flex items-center justify-center w-40 h-40 sm:w-48 sm:h-48 rounded-full transition-transform duration-300 hover:scale-105 active:scale-95"
           >
-            <span className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 opacity-75 blur-xl group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></span>
-            <span className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-[0_0_50px_rgba(168,85,247,0.5)]"></span>
+            <span className="absolute inset-0 rounded-full bg-red-700 opacity-75 transition-opacity duration-300"></span>
+            <span className="absolute inset-0 rounded-full bg-red-600"></span>
             <span className="relative flex flex-col items-center justify-center text-white gap-2 z-10">
               <MicIcon />
               <span className="font-semibold text-sm sm:text-base tracking-wide">Tap to Listen</span>
@@ -257,7 +252,7 @@ const sendAudioToBackend = useCallback(async (audioBlob) => {
 
             <button
               onClick={handleReset}
-              className="mt-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-semibold transition-transform duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-purple-900/40"
+              className="mt-2 px-6 py-2.5 rounded-full bg-red-600 hover:bg-red-700 text-white text-sm font-semibold transition-transform duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-red-900/40"
             >
               Listen Again
             </button>
@@ -273,7 +268,7 @@ const sendAudioToBackend = useCallback(async (audioBlob) => {
             </div>
             <button
               onClick={handleReset}
-              className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-semibold transition-transform duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-purple-900/40"
+              className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-red-600 hover:bg-red-700 text-white text-sm font-semibold transition-transform duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-red-900/40"
             >
               <RetryIcon />
               Try Again
