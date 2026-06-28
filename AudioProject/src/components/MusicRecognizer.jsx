@@ -62,7 +62,7 @@ const sendAudioToBackend = useCallback(async (audioBlob) => {
     const formData = new FormData();
     formData.append('audioFile', audioBlob, 'sample.mp3');
 
-    const response = await fetch('http://localhost:5000/api/identify-and-map', {
+    const response = await fetch('https://sonic-echo-production.up.railway.app/api/identify-and-map', {
       method: 'POST',
       body: formData,
     });
